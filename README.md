@@ -18,6 +18,7 @@ This example dump was pulled from the `LiteAgent.exe` process from the running i
     - [`minidump.py` Analysis](#minidumppy-analysis)
     - [WinDbg - UserMode Analysis](#windbg---usermode-analysis)
     - [Google BreakPad](#google-breakpad)
+    - [Rust-minidump](#rust-minidump)
     - [Volatility (Broken)](#volatility-broken)
   - [Training - Videos](#training---videos)
 
