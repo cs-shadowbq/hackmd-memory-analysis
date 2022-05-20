@@ -3,15 +3,35 @@
 [![hackmd-github-sync-badge](https://hackmd.io/zBbmriwURj6LjFeR0Rma1A/badge)](https://hackmd.io/zBbmriwURj6LjFeR0Rma1A)
 
 
-
-
 This example dump was pulled from the `LiteAgent.exe` process from the running instance in AWS from a Windows Server 2019 using CrowdStrike Falcon Real Time Response `memdump`.
+
+## Table of contents
+
+- [Working with Application Memory Dumps (MINIDUMPS)](#working-with-application-memory-dumps-minidumps)
+  - [What Are Mini Dumps](#what-are-mini-dumps)
+  - [Application Dump - MDMP (minidump)](#application-dump---mdmp-minidump)
+    - [Magic Number](#magic-number)
+  - [System](#system)
+    - [Aquisition via RTR - Crowdstrike](#aquisition-via-rtr---crowdstrike)
+  - [Analysis Tools](#analysis-tools)
+    - [Linux - Dump to Unicode with Strings](#linux---dump-to-unicode-with-strings)
+    - [`minidump.py` Analysis](#minidumppy-analysis)
+    - [WinDbg - UserMode Analysis](#windbg---usermode-analysis)
+    - [Google BreakPad](#google-breakpad)
+    - [Volatility (Broken)](#volatility-broken)
+  - [Training - Videos](#training---videos)
 
 ## What Are Mini Dumps
 
-Actually there are many different types of MINIDUMPS. They all stem from the documented process on MSDN. 
+A process dump is often a much smaller file(MBs) than a complete memory dump (GBs), it is focused on one process. 
 
-These dumps can be created from tools such as Microsoft's `userdump.exe`
+Actually there are many different types of MINIDUMPS. They all stem from the documented process on MSDN. These dumps can be created from tools such as Microsoft's `userdump.exe`, process-hackers, etc.
+
+## Application Dump - MDMP (minidump)
+
+### Magic Number
+
+![](https://i.imgur.com/E2I0I0Q.png)
 
 https://docs.microsoft.com/en-us/windows/win32/api/minidumpapiset/ne-minidumpapiset-minidump_type
 ```
@@ -48,12 +68,14 @@ typedef enum _MINIDUMP_TYPE {
 
 ## System
 
+Here is the information about the system this PID 2828 is pulled from.
+
 ![](https://i.imgur.com/gRhhO2x.png)
 
 
-## Aquisition via RTR - Crowdstrike 
+### Aquisition via RTR - Crowdstrike 
 
-`memdump 2828`
+In this example, `memdump 2828` I used CrowdStrike `memdump` collect the small process only sector memory aquistion.
 
 ![](https://i.imgur.com/tpGsT3V.png)
 
@@ -62,50 +84,18 @@ The file from crowdstrike comes as
 `Pid-2828.dmp.7z` - 7zip encrypted with `infected` in a containing folder
 
 
+## Analysis Tools
 
 
-## Application Dump - MDMP (minidump)
-
-### Magic Number
-
-![](https://i.imgur.com/E2I0I0Q.png)
-
-### Volatility can't handle just app space memory.
-
-* Feature Request: https://github.com/volatilityfoundation/volatility/issues/443
-
-Try to open an MDMP in `Vol.py` will cause an error as the Kernel pagememory is not present.
-
-Note both image or crashdump 
-
-```shell
-$> volatility -f Pid-2828.dmp --profile=Win10x64_10586 crashinfo
-Volatility Foundation Volatility Framework 2.6
-ERROR   : volatility.debug    : Memory Image could not be identified as ['WindowsCrashDumpSpace32', 'WindowsCrashDumpSpace64', 'WindowsCrashDumpSpace64BitMap']
-```
-
-```shell=
-$>volatility -f Pid-2828.dmp --profile=Win10x64_10586 imageinfo
-Volatility Foundation Volatility Framework 2.6
-INFO    : volatility.debug    : Determining profile based on KDBG search...
-          Suggested Profile(s) : No suggestion (Instantiated with no profile)
-                     AS Layer1 : FileAddressSpace (/home/ec2-user/Pid-2828.dmp)
-                      PAE type : No PAE
-
-```
-
-Same reason here.. (regarding v3)
-
-![](https://i.imgur.com/2RMtXzC.png)
-
-
-### Linux - Dump to Unicode
+### Linux - Dump to Unicode with Strings
 
 Dumping Strings to UNICODE
 
 ```shell=
 bash> strings -a -t d -r l Pid-2828.dmp > String_unicode.txt
 ```
+
+usecase: `memdump` a hollowed process, you can just run 'strings' and possibly identify a C2 callback/ip/domain
 
 ### `minidump.py` Analysis
 
@@ -116,28 +106,30 @@ Original Blog: http://moyix.blogspot.com/2008/05/parsing-windows-minidumps.html
 ![](https://i.imgur.com/L3IbKmN.png)
 
 
-## WinDbg - UserMode Analysis
+### WinDbg - UserMode Analysis
 
 https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools
 
-### Opening the files
+#### Opening the files
 
 ![](https://i.imgur.com/NNDanKC.png)
 
 
-### Analyse Them
+#### Analyze the memory dump
+
+`!analyze -v` - Execute the analyze tool.
 
 ![](https://i.imgur.com/VOg6IsW.png)
 
 
-## Google BreakPad
+### Google BreakPad
 
 https://www.chromium.org/developers/crash-reports/#working-with-minidumps
 
 `minidump_stackwalk` prints the stack trace for all of the threads in the minidump. Note that without Breakpad symbol files, placed in a special directory structure, this will not symbolize the stack. It will merely print the %EIP, %EBP, and %ESP (or the x64 equivalent) for each frame and the code module in which the frame resides. `minidump_dump` outputs the stack memory for each thread as a hexadecimal string.
 
 
-### Compiling BreakPad
+#### Compiling BreakPad
 
 Google Has BreakPad can analyse minidumps too. You need to add the lss linux call support. 
 
@@ -150,7 +142,7 @@ git clone https://chromium.googlesource.com/linux-syscall-support src/third_part
 make
 ```
 
-### Running Breakpad
+#### Running Breakpad
 
 The command(s) to run would be `minidump_stackwalk` and `minidump_dump`
 
@@ -244,6 +236,35 @@ MDRawDirectory
 ```
 
 
+### Volatility (Broken)
+
+Volatility (`vol.py`) can't handle just app space memory.
+
+* Feature/Bug Request: https://github.com/volatilityfoundation/volatility/issues/443
+
+Try to open an MDMP in `Vol.py` will cause an error as the Kernel pagememory is not present.
+
+Note both image or crashdump 
+
+```shell
+$> volatility -f Pid-2828.dmp --profile=Win10x64_10586 crashinfo
+Volatility Foundation Volatility Framework 2.6
+ERROR   : volatility.debug    : Memory Image could not be identified as ['WindowsCrashDumpSpace32', 'WindowsCrashDumpSpace64', 'WindowsCrashDumpSpace64BitMap']
+```
+
+```shell=
+$>volatility -f Pid-2828.dmp --profile=Win10x64_10586 imageinfo
+Volatility Foundation Volatility Framework 2.6
+INFO    : volatility.debug    : Determining profile based on KDBG search...
+          Suggested Profile(s) : No suggestion (Instantiated with no profile)
+                     AS Layer1 : FileAddressSpace (/home/ec2-user/Pid-2828.dmp)
+                      PAE type : No PAE
+
+```
+
+Same reason here.. (regarding v3)
+
+![](https://i.imgur.com/2RMtXzC.png)
 
 ## Training - Videos 
 
