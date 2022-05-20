@@ -1,0 +1,960 @@
+MDRawHeader
+  signature            = 0x504d444d
+  version              = 0xa063a793
+  stream_count         = 11
+  stream_directory_rva = 0x20
+  checksum             = 0x0
+  time_date_stamp      = 0x6285bfce 2022-05-19 03:55:58
+  flags                = 0x2
+
+mDirectory[0]
+MDRawDirectory
+  stream_type        = 0x3 (MD_THREAD_LIST_STREAM)
+  location.data_size = 100
+  location.rva       = 0x630
+
+mDirectory[1]
+MDRawDirectory
+  stream_type        = 0x4 (MD_MODULE_LIST_STREAM)
+  location.data_size = 2380
+  location.rva       = 0x6a0
+
+mDirectory[2]
+MDRawDirectory
+  stream_type        = 0x9 (MD_MEMORY_64_LIST_STREAM)
+  location.data_size = 2624
+  location.rva       = 0x257b
+
+mDirectory[3]
+MDRawDirectory
+  stream_type        = 0x7 (MD_SYSTEM_INFO_STREAM)
+  location.data_size = 56
+  location.rva       = 0xa4
+
+mDirectory[4]
+MDRawDirectory
+  stream_type        = 0xf (MD_MISC_INFO_STREAM)
+  location.data_size = 1364
+  location.rva       = 0xdc
+
+mDirectory[5]
+MDRawDirectory
+  stream_type        = 0x15 (MD_SYSTEM_MEMORY_INFO_STREAM)
+  location.data_size = 492
+  location.rva       = 0xfec
+
+mDirectory[6]
+MDRawDirectory
+  stream_type        = 0x16 (MD_PROCESS_VM_COUNTERS_STREAM)
+  location.data_size = 152
+  location.rva       = 0x11d8
+
+mDirectory[7]
+MDRawDirectory
+  stream_type        = 0x0 (MD_UNUSED_STREAM)
+  location.data_size = 0
+  location.rva       = 0x0
+
+mDirectory[8]
+MDRawDirectory
+  stream_type        = 0x0 (MD_UNUSED_STREAM)
+  location.data_size = 0
+  location.rva       = 0x0
+
+mDirectory[9]
+MDRawDirectory
+  stream_type        = 0x0 (MD_UNUSED_STREAM)
+  location.data_size = 0
+  location.rva       = 0x0
+
+mDirectory[10]
+MDRawDirectory
+  stream_type        = 0x0 (MD_UNUSED_STREAM)
+  location.data_size = 0
+  location.rva       = 0x0
+
+Streams:
+  stream type 0x0 (MD_UNUSED_STREAM) at index 10
+  stream type 0x3 (MD_THREAD_LIST_STREAM) at index 0
+  stream type 0x4 (MD_MODULE_LIST_STREAM) at index 1
+  stream type 0x7 (MD_SYSTEM_INFO_STREAM) at index 3
+  stream type 0x9 (MD_MEMORY_64_LIST_STREAM) at index 2
+  stream type 0xf (MD_MISC_INFO_STREAM) at index 4
+  stream type 0x15 (MD_SYSTEM_MEMORY_INFO_STREAM) at index 5
+  stream type 0x16 (MD_PROCESS_VM_COUNTERS_STREAM) at index 6
+
+MinidumpThreadList
+  thread_count = 2
+
+thread[0]
+MDRawThread
+  thread_id                   = 0xb10
+  suspend_count               = 0
+  priority_class              = 0x20
+  priority                    = 0x0
+  teb                         = 0xa1dd0c1000
+  stack.start_of_memory_range = 0xa1dd2ff808
+  stack.memory.data_size      = 0x7f8
+  stack.memory.rva            = 0x0
+  thread_context.data_size    = 0x4d0
+  thread_context.rva          = 0x1872
+
+MDRawContextAMD64
+  p1_home       = 0x10
+  p2_home       = 0x7ff8cea1afb4
+  p3_home       = 0x0
+  p4_home       = 0xffffffff
+  p5_home       = 0x2
+  p6_home       = 0x266031d0000
+  context_flags = 0x10001f
+  mx_csr        = 0x1f80
+  cs            = 0x33
+  ds            = 0x2b
+  es            = 0x2b
+  fs            = 0x53
+  gs            = 0x2b
+  ss            = 0x2b
+  eflags        = 0x246
+  dr0           = 0x0
+  dr1           = 0x0
+  dr2           = 0x0
+  dr3           = 0x0
+  dr6           = 0x0
+  dr7           = 0x0
+  rax           = 0x4
+  rcx           = 0x114
+  rdx           = 0x0
+  rbx           = 0x0
+  rsp           = 0xa1dd2ff808
+  rbp           = 0xa1dd2ffaf0
+  rsi           = 0x0
+  rdi           = 0x114
+  r8            = 0x7ff8ce7f14d2
+  r9            = 0x7ff8cdf40000
+  r10           = 0x0
+  r11           = 0x7ff8cdf4ad00
+  r12           = 0xa1dd2ffa50
+  r13           = 0xa1dd2ffa70
+  r14           = 0x114
+  r15           = 0x2709a463b50
+  rip           = 0x7ff8ceaafa74
+
+No stack
+
+thread[1]
+MDRawThread
+  thread_id                   = 0xb50
+  suspend_count               = 0
+  priority_class              = 0x20
+  priority                    = 0x0
+  teb                         = 0xa1dd0c7000
+  stack.start_of_memory_range = 0xa1dd5ff618
+  stack.memory.data_size      = 0x9e8
+  stack.memory.rva            = 0x0
+  thread_context.data_size    = 0x4d0
+  thread_context.rva          = 0x1d42
+
+MDRawContextAMD64
+  p1_home       = 0x10
+  p2_home       = 0x7ff8cea1afb4
+  p3_home       = 0x0
+  p4_home       = 0xffffffff
+  p5_home       = 0x2
+  p6_home       = 0x266031d0000
+  context_flags = 0x10001f
+  mx_csr        = 0x1f80
+  cs            = 0x33
+  ds            = 0x2b
+  es            = 0x2b
+  fs            = 0x53
+  gs            = 0x2b
+  ss            = 0x2b
+  eflags        = 0x246
+  dr0           = 0x0
+  dr1           = 0x0
+  dr2           = 0x0
+  dr3           = 0x0
+  dr6           = 0x0
+  dr7           = 0x0
+  rax           = 0x5b
+  rcx           = 0x3
+  rdx           = 0xa1dd5ff970
+  rbx           = 0x3
+  rsp           = 0xa1dd5ff618
+  rbp           = 0x0
+  rsi           = 0x1
+  rdi           = 0x3
+  r8            = 0xffffffffffffffff
+  r9            = 0x130
+  r10           = 0x0
+  r11           = 0x246
+  r12           = 0xea60
+  r13           = 0xa1dd5ff970
+  r14           = 0xa1dd5ff670
+  r15           = 0x0
+  rip           = 0x7ff8ceab0544
+
+No stack
+
+MinidumpModuleList
+  module_count = 22
+
+module[0]
+MDRawModule
+  base_of_image                   = 0x7ff70bb90000
+  size_of_image                   = 0x70000
+  checksum                        = 0x7cbe3
+  time_date_stamp                 = 0x5df7e1cf 2019-12-16 19:58:07
+  module_name_rva                 = 0x1276
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0x80002:0x70005
+  version_info.product_version    = 0x80002:0x70005
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x8
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x1
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 98
+  cv_record.rva                   = 0x2212
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Program Files\Amazon\XenTools\LiteAgent.exe"
+  (code_identifier)               = "5DF7E1CF70000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 67666430-d217-4b4c-9bd0-e43e965f199b
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "C:\codebuild\tmp\output\src410906579\src\vs2017\Release\x64\LiteAgent.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "C:\codebuild\tmp\output\src410906579\src\vs2017\Release\x64\LiteAgent.pdb"
+  (debug_identifier)              = "67666430D2174B4C9BD0E43E965F199B1"
+  (version)                       = "8.2.7.5"
+
+module[1]
+MDRawModule
+  base_of_image                   = 0x7ff8cea10000
+  size_of_image                   = 0x1ed000
+  checksum                        = 0x1f657b
+  time_date_stamp                 = 0x3c398a4b 2002-01-07 11:45:15
+  module_name_rva                 = 0x12d8
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630a7e
+  version_info.product_version    = 0xa0000:0x45630a7e
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 34
+  cv_record.rva                   = 0x2274
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\ntdll.dll"
+  (code_identifier)               = "3C398A4B1ed000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 54935064-e481-adb0-a9f4-3cec5bf5da65
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "ntdll.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "ntdll.pdb"
+  (debug_identifier)              = "54935064E481ADB0A9F43CEC5BF5DA651"
+  (version)                       = "10.0.17763.2686"
+
+module[2]
+MDRawModule
+  base_of_image                   = 0x7ff8cc630000
+  size_of_image                   = 0xb4000
+  checksum                        = 0xc1e46
+  time_date_stamp                 = 0x6fc57844 2029-06-03 20:19:16
+  module_name_rva                 = 0x1318
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630a7e
+  version_info.product_version    = 0xa0000:0x45630a7e
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x2296
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\kernel32.dll"
+  (code_identifier)               = "6FC57844b4000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 058fff2d-1fb5-3d68-77c4-03fc3763692d
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "kernel32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "kernel32.pdb"
+  (debug_identifier)              = "058FFF2D1FB53D6877C403FC3763692D1"
+  (version)                       = "10.0.17763.2686"
+
+module[3]
+MDRawModule
+  base_of_image                   = 0x7ff8cb6e0000
+  size_of_image                   = 0x294000
+  checksum                        = 0x295752
+  time_date_stamp                 = 0x42f11d96 2005-08-03 19:40:06
+  module_name_rva                 = 0x135e
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630a7e
+  version_info.product_version    = 0xa0000:0x45630a7e
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 39
+  cv_record.rva                   = 0x22bb
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\KERNELBASE.dll"
+  (code_identifier)               = "42F11D96294000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = f67f804d-f819-db05-4745-278d6d36b703
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "kernelbase.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "kernelbase.pdb"
+  (debug_identifier)              = "F67F804DF819DB054745278D6D36B7031"
+  (version)                       = "10.0.17763.2686"
+
+module[4]
+MDRawModule
+  base_of_image                   = 0x7ff8ca9f0000
+  size_of_image                   = 0x5d000
+  checksum                        = 0x6167d
+  time_date_stamp                 = 0x8941f3e3 2042-12-21 18:54:27
+  module_name_rva                 = 0x13a8
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630001
+  version_info.product_version    = 0xa0000:0x45630001
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x22e2
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\powrprof.dll"
+  (code_identifier)               = "8941F3E35d000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 015f6245-e460-5a2d-d7f3-525ba19a47a2
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "powrprof.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "powrprof.pdb"
+  (debug_identifier)              = "015F6245E4605A2DD7F3525BA19A47A21"
+  (version)                       = "10.0.17763.1"
+
+module[5]
+MDRawModule
+  base_of_image                   = 0x7ff8cb5b0000
+  size_of_image                   = 0xfa000
+  checksum                        = 0x10252d
+  time_date_stamp                 = 0x48ac8393 2008-08-20 20:50:27
+  module_name_rva                 = 0x13ee
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x456305d2
+  version_info.product_version    = 0xa0000:0x456305d2
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x2307
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\ucrtbase.dll"
+  (code_identifier)               = "48AC8393fa000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 9fb5798c-91eb-ca52-8cad-c890ff6e04ff
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "ucrtbase.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "ucrtbase.pdb"
+  (debug_identifier)              = "9FB5798C91EBCA528CADC890FF6E04FF1"
+  (version)                       = "10.0.17763.1490"
+
+module[6]
+MDRawModule
+  base_of_image                   = 0x7ff8cdf40000
+  size_of_image                   = 0x11d000
+  checksum                        = 0x120c4b
+  time_date_stamp                 = 0x8280105a 2039-05-19 15:14:34
+  module_name_rva                 = 0x1434
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630994
+  version_info.product_version    = 0xa0000:0x45630994
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x232c
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\rpcrt4.dll"
+  (code_identifier)               = "8280105A11d000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = f6430205-92d7-6d9c-29d1-8c6b8fb5fe2d
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "rpcrt4.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "rpcrt4.pdb"
+  (debug_identifier)              = "F643020592D76D9C29D18C6B8FB5FE2D1"
+  (version)                       = "10.0.17763.2452"
+
+module[7]
+MDRawModule
+  base_of_image                   = 0x7ff8cc240000
+  size_of_image                   = 0x197000
+  checksum                        = 0x197c13
+  time_date_stamp                 = 0x316731a3 1996-04-07 03:08:19
+  module_name_rva                 = 0x1476
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x456308a5
+  version_info.product_version    = 0xa0000:0x456308a5
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x234f
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\user32.dll"
+  (code_identifier)               = "316731A3197000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = b2dd22ce-1bd8-63c7-3786-015343bdda18
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "user32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "user32.pdb"
+  (debug_identifier)              = "B2DD22CE1BD863C73786015343BDDA181"
+  (version)                       = "10.0.17763.2213"
+
+module[8]
+MDRawModule
+  base_of_image                   = 0x7ff8cbaf0000
+  size_of_image                   = 0x20000
+  checksum                        = 0x230fc
+  time_date_stamp                 = 0xff141dbb 2105-08-12 08:20:11
+  module_name_rva                 = 0x14b8
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630001
+  version_info.product_version    = 0xa0000:0x45630001
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x1
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x2372
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\win32u.dll"
+  (code_identifier)               = "FF141DBB20000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = b9cffb2b-db97-694a-723b-75722326117a
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "win32u.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "win32u.pdb"
+  (debug_identifier)              = "B9CFFB2BDB97694A723B75722326117A1"
+  (version)                       = "10.0.17763.1"
+
+module[9]
+MDRawModule
+  base_of_image                   = 0x7ff8cbc40000
+  size_of_image                   = 0x29000
+  checksum                        = 0x33512
+  time_date_stamp                 = 0xb9f6192c 2068-11-12 02:34:20
+  module_name_rva                 = 0x14fa
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x456306a1
+  version_info.product_version    = 0xa0000:0x456306a1
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 34
+  cv_record.rva                   = 0x2395
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\gdi32.dll"
+  (code_identifier)               = "B9F6192C29000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 47bbf67f-9a6f-b530-fa37-ca880040db6c
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "gdi32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "gdi32.pdb"
+  (debug_identifier)              = "47BBF67F9A6FB530FA37CA880040DB6C1"
+  (version)                       = "10.0.17763.1697"
+
+module[10]
+MDRawModule
+  base_of_image                   = 0x7ff8caca0000
+  size_of_image                   = 0x19c000
+  checksum                        = 0x1a8bec
+  time_date_stamp                 = 0xdb59761c 2086-08-13 10:34:04
+  module_name_rva                 = 0x153a
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630994
+  version_info.product_version    = 0xa0000:0x45630994
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 38
+  cv_record.rva                   = 0x23b7
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\gdi32full.dll"
+  (code_identifier)               = "DB59761C19c000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = a97720dd-5bfc-237d-1c5f-9c5fa70b446a
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "gdi32full.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "gdi32full.pdb"
+  (debug_identifier)              = "A97720DD5BFC237D1C5F9C5FA70B446A1"
+  (version)                       = "10.0.17763.2452"
+
+module[11]
+MDRawModule
+  base_of_image                   = 0x7ff8cbba0000
+  size_of_image                   = 0xa0000
+  checksum                        = 0xa22bb
+  time_date_stamp                 = 0x448f33c2 2006-06-13 21:53:06
+  module_name_rva                 = 0x1582
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x4563015c
+  version_info.product_version    = 0xa0000:0x4563015c
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 38
+  cv_record.rva                   = 0x23dd
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\msvcp_win.dll"
+  (code_identifier)               = "448F33C2a0000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 9185b21c-0598-aa4c-b7f4-86215fcc26f7
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "msvcp_win.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "msvcp_win.pdb"
+  (debug_identifier)              = "9185B21C0598AA4CB7F486215FCC26F71"
+  (version)                       = "10.0.17763.348"
+
+module[12]
+MDRawModule
+  base_of_image                   = 0x7ff8cc580000
+  size_of_image                   = 0xa7000
+  checksum                        = 0xb1869
+  time_date_stamp                 = 0x24fe843b 1989-09-01 13:29:31
+  module_name_rva                 = 0x15ca
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630994
+  version_info.product_version    = 0xa0000:0x45630994
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x2403
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\advapi32.dll"
+  (code_identifier)               = "24FE843Ba7000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 020694e4-1bc6-7697-1ce5-dfaeca0700a0
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "advapi32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "advapi32.pdb"
+  (debug_identifier)              = "020694E41BC676971CE5DFAECA0700A01"
+  (version)                       = "10.0.17763.2452"
+
+module[13]
+MDRawModule
+  base_of_image                   = 0x7ff8cde00000
+  size_of_image                   = 0x9e000
+  checksum                        = 0x9ebcc
+  time_date_stamp                 = 0xf362c2f9 2099-05-24 19:58:49
+  module_name_rva                 = 0x1610
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0x70000:0x456301db
+  version_info.product_version    = 0xa0000:0x456301db
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x1
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x2428
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\msvcrt.dll"
+  (code_identifier)               = "F362C2F99e000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = b40d63cf-4e05-ff62-bddf-63550f5fbef5
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "msvcrt.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "msvcrt.pdb"
+  (debug_identifier)              = "B40D63CF4E05FF62BDDF63550F5FBEF51"
+  (version)                       = "7.0.17763.475"
+
+module[14]
+MDRawModule
+  base_of_image                   = 0x7ff8ce770000
+  size_of_image                   = 0x9f000
+  checksum                        = 0xa02d5
+  time_date_stamp                 = 0xcb744547 2078-03-01 21:12:39
+  module_name_rva                 = 0x1652
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630a7e
+  version_info.product_version    = 0xa0000:0x45630a7e
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x1
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 36
+  cv_record.rva                   = 0x244b
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\sechost.dll"
+  (code_identifier)               = "CB7445479f000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = aea8f0f4-4901-e343-12c7-542aa7353dd5
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "sechost.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "sechost.pdb"
+  (debug_identifier)              = "AEA8F0F44901E34312C7542AA7353DD51"
+  (version)                       = "10.0.17763.2686"
+
+module[15]
+MDRawModule
+  base_of_image                   = 0x7ff8cbc90000
+  size_of_image                   = 0x476000
+  checksum                        = 0x488689
+  time_date_stamp                 = 0xcc9bc0eb 2078-10-12 00:18:51
+  module_name_rva                 = 0x1696
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630194
+  version_info.product_version    = 0xa0000:0x45630194
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x246f
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\setupapi.dll"
+  (code_identifier)               = "CC9BC0EB476000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 5232ab22-d820-f3f0-db4f-6db0f992ca97
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "setupapi.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "setupapi.pdb"
+  (debug_identifier)              = "5232AB22D820F3F0DB4F6DB0F992CA971"
+  (version)                       = "10.0.17763.404"
+
+module[16]
+MDRawModule
+  base_of_image                   = 0x7ff8cbaa0000
+  size_of_image                   = 0x4a000
+  checksum                        = 0x4f3eb
+  time_date_stamp                 = 0xca7e64ca 2077-08-27 09:09:30
+  module_name_rva                 = 0x16dc
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630001
+  version_info.product_version    = 0xa0000:0x45630001
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x2494
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\cfgmgr32.dll"
+  (code_identifier)               = "CA7E64CA4a000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 45f7473d-366f-d1ec-f759-1c6e4230d4b1
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "cfgmgr32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "cfgmgr32.pdb"
+  (debug_identifier)              = "45F7473D366FD1ECF7591C6E4230D4B11"
+  (version)                       = "10.0.17763.1"
+
+module[17]
+MDRawModule
+  base_of_image                   = 0x7ff8cb6b0000
+  size_of_image                   = 0x26000
+  checksum                        = 0x2e580
+  time_date_stamp                 = 0xaedfed7b 2062-12-21 07:15:07
+  module_name_rva                 = 0x1722
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x4563082a
+  version_info.product_version    = 0xa0000:0x4563082a
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x24b9
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\bcrypt.dll"
+  (code_identifier)               = "AEDFED7B26000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 854c9a83-b985-965c-0971-0b916b81b623
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "bcrypt.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "bcrypt.pdb"
+  (debug_identifier)              = "854C9A83B985965C09710B916B81B6231"
+  (version)                       = "10.0.17763.2090"
+
+module[18]
+MDRawModule
+  base_of_image                   = 0x7ff8ca790000
+  size_of_image                   = 0x29000
+  checksum                        = 0x3357a
+  time_date_stamp                 = 0x49380fda 2008-12-04 17:14:02
+  module_name_rva                 = 0x1764
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630861
+  version_info.product_version    = 0xa0000:0x45630861
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x24dc
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\devobj.dll"
+  (code_identifier)               = "49380FDA29000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 6961dc09-1eee-b291-3dca-f3aaf6626f52
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "devobj.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "devobj.pdb"
+  (debug_identifier)              = "6961DC091EEEB2913DCAF3AAF6626F521"
+  (version)                       = "10.0.17763.2145"
+
+module[19]
+MDRawModule
+  base_of_image                   = 0x7ff8cba30000
+  size_of_image                   = 0x61000
+  checksum                        = 0x605f0
+  time_date_stamp                 = 0xc3c96c27 2074-02-02 00:39:03
+  module_name_rva                 = 0x17a6
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x456309ce
+  version_info.product_version    = 0xa0000:0x456309ce
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 37
+  cv_record.rva                   = 0x24ff
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\wintrust.dll"
+  (code_identifier)               = "C3C96C2761000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = cf74250f-8370-cc0b-ea03-f49c3b937239
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "wintrust.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "wintrust.pdb"
+  (debug_identifier)              = "CF74250F8370CC0BEA03F49C3B9372391"
+  (version)                       = "10.0.17763.2510"
+
+module[20]
+MDRawModule
+  base_of_image                   = 0x7ff8caa80000
+  size_of_image                   = 0x12000
+  checksum                        = 0x1b8e7
+  time_date_stamp                 = 0xac91a4b2 2061-09-29 13:27:14
+  module_name_rva                 = 0x17ec
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x45630001
+  version_info.product_version    = 0xa0000:0x45630001
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 35
+  cv_record.rva                   = 0x2524
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\msasn1.dll"
+  (code_identifier)               = "AC91A4B212000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = f70616c4-ef47-794a-6803-c8448fe4a516
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "msasn1.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "msasn1.pdb"
+  (debug_identifier)              = "F70616C4EF47794A6803C8448FE4A5161"
+  (version)                       = "10.0.17763.1"
+
+module[21]
+MDRawModule
+  base_of_image                   = 0x7ff8caaa0000
+  size_of_image                   = 0x1f5000
+  checksum                        = 0x1fe6df
+  time_date_stamp                 = 0xd78f4ed6 2084-08-07 13:27:50
+  module_name_rva                 = 0x182e
+  version_info.signature          = 0xfeef04bd
+  version_info.struct_version     = 0x10000
+  version_info.file_version       = 0xa0000:0x456308dc
+  version_info.product_version    = 0xa0000:0x456308dc
+  version_info.file_flags_mask    = 0x3f
+  version_info.file_flags         = 0x0
+  version_info.file_os            = 0x40004
+  version_info.file_type          = 0x2
+  version_info.file_subtype       = 0x0
+  version_info.file_date          = 0x0:0x0
+  cv_record.data_size             = 36
+  cv_record.rva                   = 0x2547
+  misc_record.data_size           = 0
+  misc_record.rva                 = 0x0
+  (code_file)                     = "C:\Windows\System32\crypt32.dll"
+  (code_identifier)               = "D78F4ED61f5000"
+  (cv_record).cv_signature        = 0x53445352
+  (cv_record).signature           = 2900a234-2c57-7a7e-4851-04bd5ef1c374
+  (cv_record).age                 = 1
+  (cv_record).pdb_file_name       = "crypt32.pdb"
+  (misc_record)                   = (null)
+  (debug_file)                    = "crypt32.pdb"
+  (debug_identifier)              = "2900A2342C577A7E485104BD5EF1C3741"
+  (version)                       = "10.0.17763.2268"
+
+MDRawSystemInfo
+  processor_architecture                     = 0x9 (x86-64)
+  processor_level                            = 6
+  processor_revision                         = 0x4f01
+  number_of_processors                       = 2
+  product_type                               = 3
+  major_version                              = 10
+  minor_version                              = 0
+  build_number                               = 17763
+  platform_id                                = 0x2 (windows)
+  csd_version_rva                            = 0x1270
+  suite_mask                                 = 0x190
+  cpu.x86_cpu_info (invalid):
+  cpu.x86_cpu_info.vendor_id[0]              = 0x10c2774c
+  cpu.x86_cpu_info.vendor_id[1]              = 0x1
+  cpu.x86_cpu_info.vendor_id[2]              = 0x0
+  cpu.x86_cpu_info.version_information       = 0x0
+  cpu.x86_cpu_info.feature_information       = 0x0
+  cpu.x86_cpu_info.amd_extended_cpu_features = 0x0
+  cpu.other_cpu_info (valid):
+  cpu.other_cpu_info.processor_features[0]   = 0x110c2774c
+  cpu.other_cpu_info.processor_features[1]   = 0x0
+  (csd_version)                              = ""
+  (cpu_vendor)                               = (null)
+
+MDRawMiscInfo
+  size_of_info                 = 1364
+  flags1                       = 0x3f7
+  process_id                   = 2828
+  process_create_time          = 0x624c4c5f 2022-04-05 14:04:15
+  process_user_time            = 0
+  process_kernel_time          = 0
+  processor_max_mhz            = 2300
+  processor_current_mhz        = 2300
+  processor_mhz_limit          = 2300
+  processor_max_idle_state     = 1
+  processor_current_idle_state = 1
+  process_integrity_level      = 0x4000
+  process_execute_flags        = 0xd
+  protected_process            = 0
+  time_zone_id                 = 0
+  time_zone.bias               = 0
+  time_zone.standard_name      = Coordinated Universal Time
+  time_zone.standard_date      = 0000-00-00 (0) 00:00:00.000
+  time_zone.standard_bias      = 0
+  time_zone.daylight_name      = Coordinated Universal Time
+  time_zone.daylight_date      = 0000-00-00 (0) 00:00:00.000
+  time_zone.daylight_bias      = 0
+  build_string                 = 17763.1.amd64fre.rs5_release.180914-1434
+  dbg_bld_str                  = dbgcore.amd64,10.0.17763.1728
+  xstate_data.size_of_info     = 0
+  xstate_data.context_size     = 0
+  xstate_data.enabled_features = 0x0
+  xstate_data.features[]       = (empty)
+  process_cookie               = -1952607375
