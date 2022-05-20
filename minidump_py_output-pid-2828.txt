@@ -1,0 +1,1510 @@
+Container:
+    Signature = 'MDMP'
+    Version = 42899
+    ImplementationVersion = 41059
+    NumberOfStreams = 11
+    StreamDirectoryRva = 32
+    MINIDUMP_DIRECTORY = [
+        Container:
+            StreamType = 'ThreadListStream'
+            Location = Container:
+                DataSize = 100
+                RVA = 1584
+            DirectoryData = Container:
+                NumberOfThreads = 2
+                MINIDUMP_THREAD = [
+                    Container:
+                        ThreadId = 2832
+                        SuspendCount = 0
+                        PriorityClass = 32
+                        Priority = 0
+                        Teb = 695198289920
+                        Stack = Container:
+                            StartOfMemoryRange = 695200643080
+                            Memory = Container:
+                                DataSize = 2040
+                                RVA = 0
+                        ThreadContext = Container:
+                            DataSize = 1232
+                            RVA = 6258
+                        CONTEXT = Container:
+                            ContextFlags = FlagsContainer:
+                                CONTEXT_DEBUG_REGISTERS
+                            Dr0 = 0
+                            Dr1 = 3466702772
+                            Dr2 = 32760
+                            Dr3 = 0
+                            Dr6 = 0
+                            Dr7 = 4294967295
+                            FloatSave = None
+                            ExtendedRegisters = None
+                    Container:
+                        ThreadId = 2896
+                        SuspendCount = 0
+                        PriorityClass = 32
+                        Priority = 0
+                        Teb = 695198314496
+                        Stack = Container:
+                            StartOfMemoryRange = 695203788312
+                            Memory = Container:
+                                DataSize = 2536
+                                RVA = 0
+                        ThreadContext = Container:
+                            DataSize = 1232
+                            RVA = 7490
+                        CONTEXT = Container:
+                            ContextFlags = FlagsContainer:
+                                CONTEXT_DEBUG_REGISTERS
+                            Dr0 = 0
+                            Dr1 = 3466702772
+                            Dr2 = 32760
+                            Dr3 = 0
+                            Dr6 = 0
+                            Dr7 = 4294967295
+                            FloatSave = None
+                            ExtendedRegisters = None
+                ]
+        Container:
+            StreamType = 'ModuleListStream'
+            Location = Container:
+                DataSize = 2380
+                RVA = 1696
+            DirectoryData = Container:
+                NumberOfModules = 22
+                MINIDUMP_MODULE = [
+                    Container:
+                        BaseOfImage = 140699030323200
+                        SizeOfImage = 458752
+                        CheckSum = 510947
+                        TimeDateStamp = datetime.datetime(2019, 12, 16, 19, 58, 7)
+                        ModuleNameRva = 4726
+                        ModuleName = u'C:\\Program Files\\Amazon\\XenTools\\LiteAgent.exe'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 524290
+                            dwFileVersionLS = 458757
+                            dwProductVersionMS = 524290
+                            dwProductVersionLS = 458757
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 8
+                            dwFileOS = 262148
+                            dwFileType = 1
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 98
+                            RVA = 8722
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1734763568
+                                Data2 = 53783
+                                Data3 = 19276
+                                Data4 = '\x9b\xd0\xe4>\x96_\x19\x9b'
+                            Age = 1
+                            Filename = 'C:\\codebuild\\tmp\\output\\src410906579\\src\\vs2017\\Release\\x64\\LiteAgent.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 49504
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706595274752
+                        SizeOfImage = 2019328
+                        CheckSum = 2057595
+                        TimeDateStamp = datetime.datetime(2002, 1, 7, 11, 45, 15)
+                        ModuleNameRva = 4824
+                        ModuleName = u'C:\\Windows\\System32\\ntdll.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118654
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118654
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 34
+                            RVA = 8820
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1418940516
+                                Data2 = 58497
+                                Data3 = 44464
+                                Data4 = '\xa9\xf4<\xec[\xf5\xdae'
+                            Age = 1
+                            Filename = 'ntdll.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706557657088
+                        SizeOfImage = 737280
+                        CheckSum = 794182
+                        TimeDateStamp = datetime.datetime(2029, 6, 3, 20, 19, 16)
+                        ModuleNameRva = 4888
+                        ModuleName = u'C:\\Windows\\System32\\kernel32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118654
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118654
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 8854
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 93323053
+                                Data2 = 8117
+                                Data3 = 15720
+                                Data4 = 'w\xc4\x03\xfc7ci-'
+                            Age = 1
+                            Filename = 'kernel32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706541600768
+                        SizeOfImage = 2703360
+                        CheckSum = 2709330
+                        TimeDateStamp = datetime.datetime(2005, 8, 3, 19, 40, 6)
+                        ModuleNameRva = 4958
+                        ModuleName = u'C:\\Windows\\System32\\KERNELBASE.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118654
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118654
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 39
+                            RVA = 8891
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 4135551053
+                                Data2 = 63513
+                                Data3 = 56069
+                                Data4 = "GE'\x8dm6\xb7\x03"
+                            Age = 1
+                            Filename = 'kernelbase.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706528034816
+                        SizeOfImage = 380928
+                        CheckSum = 398973
+                        TimeDateStamp = datetime.datetime(2042, 12, 21, 18, 54, 27)
+                        ModuleNameRva = 5032
+                        ModuleName = u'C:\\Windows\\System32\\powrprof.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164115969
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164115969
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 8930
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 23028293
+                                Data2 = 58464
+                                Data3 = 23085
+                                Data4 = '\xd7\xf3R[\xa1\x9aG\xa2'
+                            Age = 1
+                            Filename = 'powrprof.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706540355584
+                        SizeOfImage = 1024000
+                        CheckSum = 1058093
+                        TimeDateStamp = datetime.datetime(2008, 8, 20, 20, 50, 27)
+                        ModuleNameRva = 5102
+                        ModuleName = u'C:\\Windows\\System32\\ucrtbase.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164117458
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164117458
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 8967
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 2679470476
+                                Data2 = 37355
+                                Data3 = 51794
+                                Data4 = '\x8c\xad\xc8\x90\xffn\x04\xff'
+                            Age = 1
+                            Filename = 'ucrtbase.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706583937024
+                        SizeOfImage = 1167360
+                        CheckSum = 1182795
+                        TimeDateStamp = datetime.datetime(2039, 5, 19, 15, 14, 34)
+                        ModuleNameRva = 5172
+                        ModuleName = u'C:\\Windows\\System32\\rpcrt4.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118420
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118420
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9004
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 4131586565
+                                Data2 = 37591
+                                Data3 = 28060
+                                Data4 = ')\xd1\x8ck\x8f\xb5\xfe-'
+                            Age = 1
+                            Filename = 'rpcrt4.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706553528320
+                        SizeOfImage = 1667072
+                        CheckSum = 1670163
+                        TimeDateStamp = datetime.datetime(1996, 4, 7, 3, 8, 19)
+                        ModuleNameRva = 5238
+                        ModuleName = u'C:\\Windows\\System32\\user32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118181
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118181
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9039
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 3000836814
+                                Data2 = 7128
+                                Data3 = 25543
+                                Data4 = '7\x86\x01SC\xbd\xda\x18'
+                            Age = 1
+                            Filename = 'user32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706545860608
+                        SizeOfImage = 131072
+                        CheckSum = 143612
+                        TimeDateStamp = datetime.datetime(2105, 8, 12, 8, 20, 11)
+                        ModuleNameRva = 5304
+                        ModuleName = u'C:\\Windows\\System32\\win32u.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164115969
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164115969
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 1
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9074
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 3117415211
+                                Data2 = 56215
+                                Data3 = 26954
+                                Data4 = 'r;ur#&\x11z'
+                            Age = 1
+                            Filename = 'win32u.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706547236864
+                        SizeOfImage = 167936
+                        CheckSum = 210194
+                        TimeDateStamp = datetime.datetime(2068, 11, 12, 2, 34, 20)
+                        ModuleNameRva = 5370
+                        ModuleName = u'C:\\Windows\\System32\\gdi32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164117665
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164117665
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 34
+                            RVA = 9109
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1203500671
+                                Data2 = 39535
+                                Data3 = 46384
+                                Data4 = '\xfa7\xca\x88\x00@\xdbl'
+                            Age = 1
+                            Filename = 'gdi32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706530852864
+                        SizeOfImage = 1687552
+                        CheckSum = 1739756
+                        TimeDateStamp = datetime.datetime(2086, 8, 13, 10, 34, 4)
+                        ModuleNameRva = 5434
+                        ModuleName = u'C:\\Windows\\System32\\gdi32full.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118420
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118420
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 38
+                            RVA = 9143
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 2843156701
+                                Data2 = 23548
+                                Data3 = 9085
+                                Data4 = '\x1c_\x9c_\xa7\x0bDj'
+                            Age = 1
+                            Filename = 'gdi32full.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706546581504
+                        SizeOfImage = 655360
+                        CheckSum = 664251
+                        TimeDateStamp = datetime.datetime(2006, 6, 13, 21, 53, 6)
+                        ModuleNameRva = 5506
+                        ModuleName = u'C:\\Windows\\System32\\msvcp_win.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164116316
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164116316
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 38
+                            RVA = 9181
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 2441458204
+                                Data2 = 1432
+                                Data3 = 43596
+                                Data4 = '\xb7\xf4\x86!_\xcc&\xf7'
+                            Age = 1
+                            Filename = 'msvcp_win.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706556936192
+                        SizeOfImage = 684032
+                        CheckSum = 727145
+                        TimeDateStamp = datetime.datetime(1989, 9, 1, 13, 29, 31)
+                        ModuleNameRva = 5578
+                        ModuleName = u'C:\\Windows\\System32\\advapi32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118420
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118420
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 9219
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 33985764
+                                Data2 = 7110
+                                Data3 = 30359
+                                Data4 = '\x1c\xe5\xdf\xae\xca\x07\x00\xa0'
+                            Age = 1
+                            Filename = 'advapi32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706582626304
+                        SizeOfImage = 647168
+                        CheckSum = 650188
+                        TimeDateStamp = datetime.datetime(2099, 5, 24, 19, 58, 49)
+                        ModuleNameRva = 5648
+                        ModuleName = u'C:\\Windows\\System32\\msvcrt.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 458752
+                            dwFileVersionLS = 1164116443
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164116443
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 1
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9256
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 3020776399
+                                Data2 = 19973
+                                Data3 = 65378
+                                Data4 = '\xbd\xdfcU\x0f_\xbe\xf5'
+                            Age = 1
+                            Filename = 'msvcrt.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706592522240
+                        SizeOfImage = 651264
+                        CheckSum = 656085
+                        TimeDateStamp = datetime.datetime(2078, 3, 1, 21, 12, 39)
+                        ModuleNameRva = 5714
+                        ModuleName = u'C:\\Windows\\System32\\sechost.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118654
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118654
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 1
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 36
+                            RVA = 9291
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 2930307316
+                                Data2 = 18689
+                                Data3 = 58179
+                                Data4 = '\x12\xc7T*\xa75=\xd5'
+                            Age = 1
+                            Filename = 'sechost.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706547564544
+                        SizeOfImage = 4677632
+                        CheckSum = 4753033
+                        TimeDateStamp = datetime.datetime(2078, 10, 12, 0, 18, 51)
+                        ModuleNameRva = 5782
+                        ModuleName = u'C:\\Windows\\System32\\setupapi.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164116372
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164116372
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 9327
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1379052322
+                                Data2 = 55328
+                                Data3 = 62448
+                                Data4 = '\xdbOm\xb0\xf9\x92\xca\x97'
+                            Age = 1
+                            Filename = 'setupapi.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706545532928
+                        SizeOfImage = 303104
+                        CheckSum = 324587
+                        TimeDateStamp = datetime.datetime(2077, 8, 27, 9, 9, 30)
+                        ModuleNameRva = 5852
+                        ModuleName = u'C:\\Windows\\System32\\cfgmgr32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164115969
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164115969
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 9364
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1173833533
+                                Data2 = 13935
+                                Data3 = 53740
+                                Data4 = '\xf7Y\x1cnB0\xd4\xb1'
+                            Age = 1
+                            Filename = 'cfgmgr32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706541404160
+                        SizeOfImage = 155648
+                        CheckSum = 189824
+                        TimeDateStamp = datetime.datetime(2062, 12, 21, 7, 15, 7)
+                        ModuleNameRva = 5922
+                        ModuleName = u'C:\\Windows\\System32\\bcrypt.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118058
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118058
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9401
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 2236390019
+                                Data2 = 47493
+                                Data3 = 38492
+                                Data4 = '\tq\x0b\x91k\x81\xb6#'
+                            Age = 1
+                            Filename = 'bcrypt.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16864
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706525544448
+                        SizeOfImage = 167936
+                        CheckSum = 210298
+                        TimeDateStamp = datetime.datetime(2008, 12, 4, 17, 14, 2)
+                        ModuleNameRva = 5988
+                        ModuleName = u'C:\\Windows\\System32\\devobj.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118113
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118113
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9436
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 1768021001
+                                Data2 = 7918
+                                Data3 = 45713
+                                Data4 = '=\xca\xf3\xaa\xf6boR'
+                            Age = 1
+                            Filename = 'devobj.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706545074176
+                        SizeOfImage = 397312
+                        CheckSum = 394736
+                        TimeDateStamp = datetime.datetime(2074, 2, 2, 0, 39, 3)
+                        ModuleNameRva = 6054
+                        ModuleName = u'C:\\Windows\\System32\\wintrust.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118478
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118478
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 37
+                            RVA = 9471
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 3480495375
+                                Data2 = 33648
+                                Data3 = 52235
+                                Data4 = '\xea\x03\xf4\x9c;\x93r9'
+                            Age = 1
+                            Filename = 'wintrust.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706528624640
+                        SizeOfImage = 73728
+                        CheckSum = 112871
+                        TimeDateStamp = datetime.datetime(2061, 9, 29, 13, 27, 14)
+                        ModuleNameRva = 6124
+                        ModuleName = u'C:\\Windows\\System32\\msasn1.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164115969
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164115969
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 35
+                            RVA = 9508
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 4144371396
+                                Data2 = 61255
+                                Data3 = 31050
+                                Data4 = 'h\x03\xc8D\x8f\xe4\xa5\x16'
+                            Age = 1
+                            Filename = 'msasn1.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                    Container:
+                        BaseOfImage = 140706528755712
+                        SizeOfImage = 2052096
+                        CheckSum = 2090719
+                        TimeDateStamp = datetime.datetime(2084, 8, 7, 13, 27, 50)
+                        ModuleNameRva = 6190
+                        ModuleName = u'C:\\Windows\\System32\\crypt32.dll'
+                        VersionInfo = Container:
+                            dwSignature = 4277077181
+                            dwStrucVersion = 65536
+                            dwFileVersionMS = 655360
+                            dwFileVersionLS = 1164118236
+                            dwProductVersionMS = 655360
+                            dwProductVersionLS = 1164118236
+                            dwFileFlagsMask = 63
+                            dwFileFlags = 0
+                            dwFileOS = 262148
+                            dwFileType = 2
+                            dwFileSubtype = 0
+                            dwFileDateMS = 0
+                            dwFileDateLS = 0
+                        CvRecord = Container:
+                            DataSize = 36
+                            RVA = 9543
+                        CvData = Container:
+                            Signature = 'RSDS'
+                            GUID = Container:
+                                Data1 = 687907380
+                                Data2 = 11351
+                                Data3 = 31358
+                                Data4 = 'HQ\x04\xbd^\xf1\xc3t'
+                            Age = 1
+                            Filename = 'crypt32.pdb'
+                        MiscRecord = Container:
+                            DataSize = 0
+                            RVA = 0
+                        Reserved0 = 16736
+                        Reserved1 = 0
+                ]
+        Container:
+            StreamType = 'Memory64ListStream'
+            Location = Container:
+                DataSize = 2624
+                RVA = 9595
+            DirectoryData = Container:
+                NumberOfMemoryRanges = 163
+                BaseRva = 12219
+                MINIDUMP_MEMORY_DESCRIPTOR64 = [
+                    Container:
+                        StartOfMemoryRange = 2147352576
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 2147401728
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 695198285824
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 695198314496
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 695200628736
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 695203778560
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 2682645905408
+                        DataSize = 65536
+                    Container:
+                        StartOfMemoryRange = 2682645970944
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 2682646036480
+                        DataSize = 106496
+                    Container:
+                        StartOfMemoryRange = 2682646167552
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 2682646233088
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 2682646298624
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 2682646364160
+                        DataSize = 806912
+                    Container:
+                        StartOfMemoryRange = 2682647216128
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 2682647281664
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 2682647805952
+                        DataSize = 237568
+                    Container:
+                        StartOfMemoryRange = 2682648854528
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 2682650951680
+                        DataSize = 1576960
+                    Container:
+                        StartOfMemoryRange = 2682652590080
+                        DataSize = 77824
+                    Container:
+                        StartOfMemoryRange = 2682653442048
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 2682655014912
+                        DataSize = 28672
+                    Container:
+                        StartOfMemoryRange = 138487157030912
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 138491486732288
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 138491486797824
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 138491486863360
+                        DataSize = 143360
+                    Container:
+                        StartOfMemoryRange = 140689909407744
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140690026520576
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140690026557440
+                        DataSize = 73728
+                    Container:
+                        StartOfMemoryRange = 140690026749952
+                        DataSize = 65536
+                    Container:
+                        StartOfMemoryRange = 140690026823680
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 140690026848256
+                        DataSize = 94208
+                    Container:
+                        StartOfMemoryRange = 140690026958848
+                        DataSize = 28672
+                    Container:
+                        StartOfMemoryRange = 140690027012096
+                        DataSize = 24576
+                    Container:
+                        StartOfMemoryRange = 140690027413504
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140690027433984
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 140690027565056
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 140690027610112
+                        DataSize = 32768
+                    Container:
+                        StartOfMemoryRange = 140699030323200
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140699030327296
+                        DataSize = 331776
+                    Container:
+                        StartOfMemoryRange = 140699030659072
+                        DataSize = 81920
+                    Container:
+                        StartOfMemoryRange = 140699030740992
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140699030753280
+                        DataSize = 28672
+                    Container:
+                        StartOfMemoryRange = 140706525544448
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706525548544
+                        DataSize = 102400
+                    Container:
+                        StartOfMemoryRange = 140706525650944
+                        DataSize = 36864
+                    Container:
+                        StartOfMemoryRange = 140706525687808
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706525691904
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 140706528034816
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528038912
+                        DataSize = 126976
+                    Container:
+                        StartOfMemoryRange = 140706528165888
+                        DataSize = 57344
+                    Container:
+                        StartOfMemoryRange = 140706528223232
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528227328
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528231424
+                        DataSize = 184320
+                    Container:
+                        StartOfMemoryRange = 140706528624640
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528628736
+                        DataSize = 36864
+                    Container:
+                        StartOfMemoryRange = 140706528665600
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 140706528681984
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528686080
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140706528755712
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706528759808
+                        DataSize = 1015808
+                    Container:
+                        StartOfMemoryRange = 140706529775616
+                        DataSize = 229376
+                    Container:
+                        StartOfMemoryRange = 140706530004992
+                        DataSize = 28672
+                    Container:
+                        StartOfMemoryRange = 140706530033664
+                        DataSize = 774144
+                    Container:
+                        StartOfMemoryRange = 140706530852864
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706530856960
+                        DataSize = 864256
+                    Container:
+                        StartOfMemoryRange = 140706531721216
+                        DataSize = 679936
+                    Container:
+                        StartOfMemoryRange = 140706532401152
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 140706532417536
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706532421632
+                        DataSize = 118784
+                    Container:
+                        StartOfMemoryRange = 140706540355584
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706540359680
+                        DataSize = 724992
+                    Container:
+                        StartOfMemoryRange = 140706541084672
+                        DataSize = 229376
+                    Container:
+                        StartOfMemoryRange = 140706541314048
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140706541326336
+                        DataSize = 53248
+                    Container:
+                        StartOfMemoryRange = 140706541404160
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706541408256
+                        DataSize = 102400
+                    Container:
+                        StartOfMemoryRange = 140706541510656
+                        DataSize = 24576
+                    Container:
+                        StartOfMemoryRange = 140706541535232
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706541539328
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 140706541600768
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706541604864
+                        DataSize = 1060864
+                    Container:
+                        StartOfMemoryRange = 140706542665728
+                        DataSize = 1404928
+                    Container:
+                        StartOfMemoryRange = 140706544070656
+                        DataSize = 16384
+                    Container:
+                        StartOfMemoryRange = 140706544087040
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706544091136
+                        DataSize = 212992
+                    Container:
+                        StartOfMemoryRange = 140706545074176
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545078272
+                        DataSize = 270336
+                    Container:
+                        StartOfMemoryRange = 140706545348608
+                        DataSize = 81920
+                    Container:
+                        StartOfMemoryRange = 140706545430528
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545434624
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545438720
+                        DataSize = 32768
+                    Container:
+                        StartOfMemoryRange = 140706545532928
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545537024
+                        DataSize = 208896
+                    Container:
+                        StartOfMemoryRange = 140706545745920
+                        DataSize = 57344
+                    Container:
+                        StartOfMemoryRange = 140706545803264
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545807360
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545811456
+                        DataSize = 24576
+                    Container:
+                        StartOfMemoryRange = 140706545860608
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545864704
+                        DataSize = 40960
+                    Container:
+                        StartOfMemoryRange = 140706545905664
+                        DataSize = 57344
+                    Container:
+                        StartOfMemoryRange = 140706545963008
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706545967104
+                        DataSize = 24576
+                    Container:
+                        StartOfMemoryRange = 140706546581504
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706546585600
+                        DataSize = 348160
+                    Container:
+                        StartOfMemoryRange = 140706546933760
+                        DataSize = 253952
+                    Container:
+                        StartOfMemoryRange = 140706547187712
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706547191808
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140706547204096
+                        DataSize = 32768
+                    Container:
+                        StartOfMemoryRange = 140706547236864
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706547240960
+                        DataSize = 57344
+                    Container:
+                        StartOfMemoryRange = 140706547298304
+                        DataSize = 81920
+                    Container:
+                        StartOfMemoryRange = 140706547380224
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706547384320
+                        DataSize = 20480
+                    Container:
+                        StartOfMemoryRange = 140706547564544
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706547568640
+                        DataSize = 905216
+                    Container:
+                        StartOfMemoryRange = 140706548473856
+                        DataSize = 245760
+                    Container:
+                        StartOfMemoryRange = 140706548719616
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706548727808
+                        DataSize = 3514368
+                    Container:
+                        StartOfMemoryRange = 140706553528320
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706553532416
+                        DataSize = 552960
+                    Container:
+                        StartOfMemoryRange = 140706554085376
+                        DataSize = 135168
+                    Container:
+                        StartOfMemoryRange = 140706554220544
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706554228736
+                        DataSize = 966656
+                    Container:
+                        StartOfMemoryRange = 140706556936192
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706556940288
+                        DataSize = 397312
+                    Container:
+                        StartOfMemoryRange = 140706557337600
+                        DataSize = 225280
+                    Container:
+                        StartOfMemoryRange = 140706557562880
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706557566976
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706557571072
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706557579264
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706557583360
+                        DataSize = 36864
+                    Container:
+                        StartOfMemoryRange = 140706557657088
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706557661184
+                        DataSize = 487424
+                    Container:
+                        StartOfMemoryRange = 140706558148608
+                        DataSize = 204800
+                    Container:
+                        StartOfMemoryRange = 140706558353408
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706558357504
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706558361600
+                        DataSize = 32768
+                    Container:
+                        StartOfMemoryRange = 140706582626304
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706582630400
+                        DataSize = 479232
+                    Container:
+                        StartOfMemoryRange = 140706583109632
+                        DataSize = 102400
+                    Container:
+                        StartOfMemoryRange = 140706583212032
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706583220224
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140706583232512
+                        DataSize = 12288
+                    Container:
+                        StartOfMemoryRange = 140706583244800
+                        DataSize = 28672
+                    Container:
+                        StartOfMemoryRange = 140706583937024
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706583941120
+                        DataSize = 901120
+                    Container:
+                        StartOfMemoryRange = 140706584842240
+                        DataSize = 172032
+                    Container:
+                        StartOfMemoryRange = 140706585014272
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706585022464
+                        DataSize = 81920
+                    Container:
+                        StartOfMemoryRange = 140706592522240
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706592526336
+                        DataSize = 430080
+                    Container:
+                        StartOfMemoryRange = 140706592956416
+                        DataSize = 163840
+                    Container:
+                        StartOfMemoryRange = 140706593120256
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706593124352
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706593128448
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706593136640
+                        DataSize = 36864
+                    Container:
+                        StartOfMemoryRange = 140706595274752
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706595278848
+                        DataSize = 1142784
+                    Container:
+                        StartOfMemoryRange = 140706596421632
+                        DataSize = 290816
+                    Container:
+                        StartOfMemoryRange = 140706596712448
+                        DataSize = 4096
+                    Container:
+                        StartOfMemoryRange = 140706596716544
+                        DataSize = 8192
+                    Container:
+                        StartOfMemoryRange = 140706596724736
+                        DataSize = 32768
+                    Container:
+                        StartOfMemoryRange = 140706596757504
+                        DataSize = 536576
+                ]
+        Container:
+            StreamType = 'SystemInfoStream'
+            Location = Container:
+                DataSize = 56
+                RVA = 164
+            DirectoryData = Container:
+                ProcessorArchitecture = 'PROCESSOR_ARCHITECTURE_AMD64'
+                ProcessorLevel = 6
+                ProcessorRevision = 20225
+                NumberOfProcessors = 2
+                ProductType = 'VER_NT_SERVER'
+                MajorVersion = 10
+                MinorVersion = 0
+                BuildNumber = 17763
+                PlatformID = 'VER_PLATFORM_WIN32_NT'
+                CSDVersionRva = 4720
+                CSDVersion = u''
+                SuiteMask = FlagsContainer:
+                    VER_SUITE_SINGLEUSERTS
+                    VER_SUITE_DATACENTER
+                    VER_SUITE_TERMINAL
+                Reserved2 = 0
+                Cpu = Container:
+                    X86CpuInfo = Container:
+                        VendorId = [
+                            281179980
+                            1
+                            0
+                        ]
+                        VersionInformation = 0
+                        FeatureInformation = 0
+                        AMDExtendedCpuFeatures = 0
+                    OtherCpuInfo = Container:
+                        ProcessorFeatures = [
+                            4576147276
+                            0
+                        ]
+        Container:
+            StreamType = 'MiscInfoStream'
+            Location = Container:
+                DataSize = 1364
+                RVA = 220
+            DirectoryData = Container:
+                SizeOfInfo = 1364
+                Flags1 = FlagsContainer:
+                    MINIDUMP_MISC1_PROCESSOR_POWER_INFO
+                    MINIDUMP_MISC1_PROCESS_TIMES
+                    MINIDUMP_MISC1_PROCESS_ID
+                ProcessId = 2828
+                ProcessCreateTime = datetime.datetime(2022, 4, 5, 14, 4, 15)
+                ProcessUserTime = datetime.timedelta(0)
+                ProcessKernelTime = datetime.timedelta(0)
+                ProcessorMaxMhz = 2300
+                ProcessorCurrentMhz = 2300
+                ProcessorMhzLimit = 2300
+                ProcessorMaxIdleState = 1
+                ProcessorCurrentIdleState = 1
+        Container:
+            StreamType = 21
+            Location = Container:
+                DataSize = 492
+                RVA = 4076
+            DirectoryData = '\x01\x00\x0f\x00Zb\x02\x00\x00\x10\x00\x00\x9c\xff\x0f\x00\x01\x00\x00\x00\xff\xff\x10\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\xff\xff\xfe\xff\xff\x7f\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\xc0\xf0\x0b\x00\x00\x00\x00\x00@\x91\x10\x00\x00\x00\x00\xb2\xf0X\x02\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x88z\x07\x00\x00\x00\x00\x00\xc3\xca\n\x00\x00\x00\x00\x00\x1a?\xa2\x00\x00\x00\x00\x00\xf0\xf0\x07\x00\x00\x00\x00\x00nO\x07\x00\x00\x00\x00\x00\x9c\x7f\x15\x00\x00\x00\x00\x00\x03r\t\x00\x00\x00\x00\x00\xa2\xd2>tRD\x00\x00\x17\xac\xff\x19$\x00\x00\x00\xa4\x94e}\x06\x00\x00\x00=\x1b\xfbE\x01\x00\x00\x00iz\x19\x014\xf5?\x00\xbe\xa8\x85\x07\xf0\xf0\x07\x00nO\x07\x00\x9c\x7f\x15\x00\x03r\t\x00\x03)\xb4\t\xd6:(\x00\x99~\xa8\x04\x00\x00\x00\x00V\xc4\xbf\x03\xb7\xe8\xbb\x00i\x8a\x16\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa0\x00\x17\x00\x8fS\x01\x00\xa5U\n\x00\xc6\x12\x00\x00iU\x02\x00\x19\xa7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00H\xa9\xbb\x00\x00\x00\x00\x00\xa9\x12\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xed\xaf\x17\x00\x0c\xbf\x00\x00\xc3?\x02\x00\xd3\x08\x00\x00\x00\x00\x00\x00 S\xdf\x00\x00\x00\x00\x00\xa0/)\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00D~z\x05\x00\x00\x00\x00W\x10\x02\x00@!\x83\x00\x02\x01\x00\x00\x0e\xaf5\x00\x00\x00\x00\x00/\x90\x00\x00\xccN\x00\x00\xa41\x1f\x01\x9d\x1c\x00\x00\x16\x96\x17\x00\x00\x00\x00\x003\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00p\xea\\\x00\x8d\xe0\x12\x00Y\x904\x00ik#\x00\xed\xd2\x9b\x00zT\x18\x15\x00\x00\x00\x00\x00\x00\x00\x00\x19\x89\xf8i\x12\x00\x00\x00\x00\x00\x00\x00/\r\x04\x00\x00\x00\x00\x00\xab\x1f\x0e\x00\x00\x00\x00\x00\xb8+\x00\x00\x00\x00\x00\x00'
+        Container:
+            StreamType = 22
+            Location = Container:
+                DataSize = 152
+                RVA = 4568
+            DirectoryData = '\x02\x00\x0f\x00R\x05\x00\x00\x00\xe0P\x00\x00\x00\x00\x00\x00@L\x00\x00\x00\x00\x00\xa0\x00\x01\x00\x00\x00\x00\x00\xf0\xff\x00\x00\x00\x00\x00\x00@\x1e\x00\x00\x00\x00\x00\x00\xc8\x1a\x00\x00\x00\x00\x00\x00\x00p\x12\x00\x00\x00\x00\x00\x000\x13\x00\x00\x00\x00\x00\x00\x10D\x04\x01\x02\x00\x00\x00\x10$\x04\x01\x02\x00\x00\x00p\x12\x00\x00\x00\x00\x00\x00\x90\x0c\x00\x00\x00\x00\x00\x000\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+        Container:
+            StreamType = 'UnusedStream'
+            Location = Container:
+                DataSize = 0
+                RVA = 0
+            DirectoryData = ''
+        Container:
+            StreamType = 'UnusedStream'
+            Location = Container:
+                DataSize = 0
+                RVA = 0
+            DirectoryData = ''
+        Container:
+            StreamType = 'UnusedStream'
+            Location = Container:
+                DataSize = 0
+                RVA = 0
+            DirectoryData = ''
+        Container:
+            StreamType = 'UnusedStream'
+            Location = Container:
+                DataSize = 0
+                RVA = 0
+            DirectoryData = ''
+    ]
+    CheckSum = 0
+    ts_reserved = Container:
+        Reserved = 1652932558
+        TimeDateStamp = datetime.datetime(2022, 5, 19, 3, 55, 58)
+    Flags = FlagsContainer:
+        MiniDumpWithFullMemory
