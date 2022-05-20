@@ -1,0 +1,124 @@
+
+Microsoft (R) Windows Debugger Version 10.0.22549.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\demo\sandbox\Pid-2828.dmp\Pid-2828.dmp]
+User Mini Dump File with Full Memory: Only application data is available
+
+Symbol search path is: srv*
+Executable search path is: 
+Windows 10 Version 17763 MP (2 procs) Free x64
+Product: Server, suite: TerminalServer DataCenter SingleUserTS
+Edition build lab: 17763.1.amd64fre.rs5_release.180914-1434
+Machine Name:
+Debug session time: Wed May 18 23:55:58.000 2022 (UTC - 4:00)
+System Uptime: 43 days 13:51:10.972
+Process Uptime: 43 days 13:51:43.000
+......................
+For analysis of this file, run !analyze -v
+ntdll!NtWaitForSingleObject+0x14:
+00007ff8`ceaafa74 c3              ret
+0:000> !analyze -v
+*******************************************************************************
+*                                                                             *
+*                        Exception Analysis                                   *
+*                                                                             *
+*******************************************************************************
+
+
+KEY_VALUES_STRING: 1
+
+    Key  : Analysis.CPU.mSec
+    Value: 890
+
+    Key  : Analysis.DebugAnalysisManager
+    Value: Create
+
+    Key  : Analysis.Elapsed.mSec
+    Value: 3427
+
+    Key  : Analysis.Init.CPU.mSec
+    Value: 593
+
+    Key  : Analysis.Init.Elapsed.mSec
+    Value: 39484
+
+    Key  : Analysis.Memory.CommitPeak.Mb
+    Value: 73
+
+    Key  : Timeline.OS.Boot.DeltaSec
+    Value: 3765070
+
+    Key  : Timeline.Process.Start.DeltaSec
+    Value: 3765103
+
+    Key  : WER.OS.Branch
+    Value: rs5_release
+
+    Key  : WER.OS.Timestamp
+    Value: 2018-09-14T14:34:00Z
+
+    Key  : WER.OS.Version
+    Value: 10.0.17763.1
+
+    Key  : WER.Process.Version
+    Value: 8.2.7.5
+
+
+FILE_IN_CAB:  Pid-2828.dmp
+
+NTGLOBALFLAG:  0
+
+APPLICATION_VERIFIER_FLAGS:  0
+
+EXCEPTION_RECORD:  (.exr -1)
+ExceptionAddress: 0000000000000000
+   ExceptionCode: 80000003 (Break instruction exception)
+  ExceptionFlags: 00000000
+NumberParameters: 0
+
+FAULTING_THREAD:  00000b10
+
+PROCESS_NAME:  LiteAgent.exe
+
+ERROR_CODE: (NTSTATUS) 0x80000003 - {EXCEPTION}  Breakpoint  A breakpoint has been reached.
+
+EXCEPTION_CODE_STR:  80000003
+
+STACK_TEXT:  
+000000a1`dd2ff808 00007ff8`cb7185c3     : 00000270`9a4651c0 00007ff8`cea37e83 00000000`00000000 00000270`9a290ea0 : ntdll!NtWaitForSingleObject+0x14
+000000a1`dd2ff810 00007ff8`ce7815ff     : 00000000`ffffffff 00007ff8`ce7e8682 000000a1`00000000 00000000`00000114 : KERNELBASE!WaitForSingleObjectEx+0x93
+000000a1`dd2ff8b0 00007ff8`ce780ee0     : 00000000`00000000 00000000`00000030 00000000`00000000 00000000`00000000 : sechost!ScSendResponseReceiveControls+0x13b
+000000a1`dd2ff9f0 00007ff8`ce78c585     : ffffffff`ffffffff ffffffff`ffffffff 00000000`00000000 00000000`00000000 : sechost!ScDispatcherLoop+0x140
+000000a1`dd2ffb30 00007ff7`0bb9531c     : ffffffff`ffffffff 00000270`9a463b50 00000000`00000000 00000000`00001010 : sechost!StartServiceCtrlDispatcherA+0x75
+000000a1`dd2ffb60 00007ff7`0bb9b4da     : 00000000`00000000 00000000`0000000a 00000000`00000000 00000000`00000000 : LiteAgent+0x531c
+000000a1`dd2ffd20 00007ff8`cc647974     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : LiteAgent+0xb4da
+000000a1`dd2ffd60 00007ff8`cea6a2f1     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : kernel32!BaseThreadInitThunk+0x14
+000000a1`dd2ffd90 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x21
+
+
+STACK_COMMAND:  ~0s; .ecxr ; kb
+
+SYMBOL_NAME:  sechost!ScSendResponseReceiveControls+13b
+
+MODULE_NAME: sechost
+
+IMAGE_NAME:  sechost.dll
+
+FAILURE_BUCKET_ID:  BREAKPOINT_80000003_sechost.dll!ScSendResponseReceiveControls
+
+OS_VERSION:  10.0.17763.1
+
+BUILDLAB_STR:  rs5_release
+
+OSPLATFORM_TYPE:  x64
+
+OSNAME:  Windows 10
+
+IMAGE_VERSION:  10.0.17763.2686
+
+FAILURE_ID_HASH:  {d2a65de2-bdb9-5fa6-7edc-d9534a4e2073}
+
+Followup:     MachineOwner
+---------
