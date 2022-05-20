@@ -235,6 +235,15 @@ MDRawDirectory
 [..snip..]
 ```
 
+### Rust-minidump 
+
+This project provides type definitions, parsing, and analysis for the minidump file format.
+
+It's fairly heavily modeled after Google Breakpad for historical reasons, but there is no fundamental interoperability requirement between the two beyond the fact that they fundamentally handle the same inputs. 
+
+https://github.com/rust-minidump/rust-minidump
+
+This is specifically designed to provide a compatible interface to mozilla's `minidump-stackwalk` which is itself similar to google-breakpad's `minidump-stackwalk`.
 
 ### Volatility (Broken)
 
