@@ -15,12 +15,20 @@ This example dump was pulled from the `LiteAgent.exe` process from the running i
     - [Aquisition via RTR - Crowdstrike](#aquisition-via-rtr---crowdstrike)
   - [Analysis Tools](#analysis-tools)
     - [Linux - Dump to Unicode with Strings](#linux---dump-to-unicode-with-strings)
+    - [Yara](#yara)
     - [`minidump.py` Analysis](#minidumppy-analysis)
     - [WinDbg - UserMode Analysis](#windbg---usermode-analysis)
     - [Google BreakPad](#google-breakpad)
     - [Rust-minidump](#rust-minidump)
+    - [MinidumpExplorer](#minidumpexplorer)
+    - [Custom Code - Kaitai](#custom-code---kaitai)
+  - [Dead Ends](#dead-ends)
+    - [Immunity Debugger (Unsupported)](#immunity-debugger-unsupported)
     - [Volatility (Broken)](#volatility-broken)
-  - [Training - Videos](#training---videos)
+  - [Training](#training)
+    - [Blog References](#blog-references)
+    - [Videos](#videos)
+    - [Minidump Creation Code References](#minidump-creation-code-references)
 
 ## What Are Mini Dumps
 
@@ -67,14 +75,17 @@ typedef enum _MINIDUMP_TYPE {
 } MINIDUMP_TYPE;
 ```
 
-## System
+![](https://i.imgur.com/w5OcAn6.png)
+
+
+## System in Example
 
 Here is the information about the system this PID 2828 is pulled from.
 
 ![](https://i.imgur.com/gRhhO2x.png)
 
 
-### Aquisition via RTR - Crowdstrike 
+### Aquisition of MINIDUMP via RTR - Crowdstrike 
 
 In this example, `memdump 2828` I used CrowdStrike `memdump` collect the small process only sector memory aquistion.
 
@@ -97,6 +108,14 @@ bash> strings -a -t d -r l Pid-2828.dmp > String_unicode.txt
 ```
 
 usecase: `memdump` a hollowed process, you can just run 'strings' and possibly identify a C2 callback/ip/domain
+
+### Yara 
+
+Using yara looking for C2 ip callback (172.17.0.21) strings in a hollowed process Pid-6624 after migration from meterpeter 
+
+![](https://i.imgur.com/4EmKh4H.png)
+
+example sigs: [tools/yara-sigs/ip.yar](tools/yara-sigs/ip.yar)
 
 ### `minidump.py` Analysis
 
@@ -246,6 +265,51 @@ https://github.com/rust-minidump/rust-minidump
 
 This is specifically designed to provide a compatible interface to mozilla's `minidump-stackwalk` which is itself similar to google-breakpad's `minidump-stackwalk`.
 
+### MinidumpExplorer
+
+View stream data contained within a minidump
+
+https://github.com/GregTheDev/MinidumpExplorer
+
+![](https://i.imgur.com/bibX2Bh.png)
+
+
+### Custom Code - Kaitai
+
+https://formats.kaitai.io/windows_minidump/index.html
+
+KS implementation details License: CC0-1.0
+
+The file itself is a container, which contains a number of typed "streams", which contain some data according to its type attribute.
+
+The has formal specification of Windows MiniDump using Kaitai Struct. This specification can be automatically translated into a variety of programming languages to get a parsing library.
+
+Supported Languages:
+
+    C++11/STL
+    C++98/STL
+    C#
+    GraphViz
+    Java
+    JavaScript
+    Lua
+    Nim
+    Perl
+    PHP
+    Python
+    Ruby
+    
+Example using the `ruby` lang `kaitai-struct` gem: 
+
+![](https://i.imgur.com/kAzhjbo.png)
+
+    
+## Dead Ends
+
+### Immunity Debugger (Unsupported)
+
+Immunity Debugger doesn't support loading of minidumps directly.
+
 ### Volatility (Broken)
 
 Volatility (`vol.py`) can't handle just app space memory.
@@ -276,9 +340,34 @@ Same reason here.. (regarding v3)
 
 ![](https://i.imgur.com/2RMtXzC.png)
 
-## Training - Videos 
+## Training 
 
+### Blog References
+
+* Using minidumpexplorer - https://gregsplaceontheweb.wordpress.com/
+* Analysis of a minidump - https://diablohorn.com/2015/09/04/discovering-the-secrets-of-a-pageant-minidump/
+* Use of Minidump in lsass (mimikatz) - https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
+* minidump of lsass hits by AVs - https://www.bussink.net/lsass-minidump-file-seen-as-malicious-by-mcafee-av/
+
+### Videos 
 
 ![](https://i.imgur.com/cc0110o.png)
 
 https://www.youtube.com/watch?v=pKQ_Io_8lTc
+
+### Minidump Creation Code References
+
+Note that the minidump module does not need administrative privileges to work properly which means that a normal user can run this module. To dump another user's process, you must be running from an elevated prompt (e.g to dump lsass).
+
+
+* MSDN Dump - https://docs.microsoft.com/en-us/windows/win32/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump
+
+  * PowerShellMafia/PowerSploit (Calls native minidumpwritedump) - https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Out-Minidump.ps1
+
+    * Empire (wraps PSM) - https://github.com/BC-SECURITY/Empire/blob/master/empire/server/modules/powershell/collection/minidump.yaml
+
+  * Metasploit (Calls native minidumpwritedump)  - https://github.com/rapid7/metasploit-framework/blob/master//modules/post/windows/gather/memory_dump.rb#L109
+
+* procdump - Windows powershell tools - https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
+
+    * HAFNIUM Styled- Use of procdump / LotL in wild - https://www.rapid7.com/blog/post/2021/03/23/defending-against-the-zero-day-analyzing-attacker-behavior-post-exploitation-of-microsoft-exchange/
