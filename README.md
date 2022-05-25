@@ -111,11 +111,17 @@ usecase: `memdump` a hollowed process, you can just run 'strings' and possibly i
 
 ### Yara 
 
-Using yara looking for C2 ip callback (172.17.0.21) strings in a hollowed process Pid-6624 after migration from meterpeter 
+(Note: Different Example)
+
+Using yara looking for C2 ip callback (172.17.0.21) strings in a hollowed process Pid-6624 after migration from meterpeter from pid-X to pid-6624 (notepad.exe)
 
 ![](https://i.imgur.com/4EmKh4H.png)
 
 example sigs: [tools/yara-sigs/ip.yar](tools/yara-sigs/ip.yar)
+
+![](https://i.imgur.com/rPp1do6.png)
+![](https://i.imgur.com/uYjB8hP.png)
+
 
 ### `minidump.py` Analysis
 
