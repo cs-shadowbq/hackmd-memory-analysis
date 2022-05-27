@@ -40,6 +40,11 @@ Actually there are many different types of MINIDUMPS. They all stem from the doc
 
 ### Magic Number
 
+```code
+magic1 = [77,68,77,80]
+magic2 = [147,167]
+```
+
 ![](https://i.imgur.com/E2I0I0Q.png)
 
 https://docs.microsoft.com/en-us/windows/win32/api/minidumpapiset/ne-minidumpapiset-minidump_type
@@ -308,6 +313,14 @@ Supported Languages:
 Example using the `ruby` lang `kaitai-struct` gem: 
 
 ![](https://i.imgur.com/kAzhjbo.png)
+
+#### Kaitai WebIDE
+
+You can locally load the minidump in a browser and explorer in the `JS` module of Kaitai WebIDE. 
+
+https://github.com/kaitai-io/kaitai_struct_webide
+
+![](https://i.imgur.com/jcrjOs4.png)
 
     
 ## Dead Ends
