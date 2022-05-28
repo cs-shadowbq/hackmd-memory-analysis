@@ -157,11 +157,11 @@ rule meterpreter_32_64_agnostic
 		description = "basic identification of common meterpreter strings"
 		
 	strings:
-		$a = /metsrv.*dll/
+		$a = /metsrv.{,8}dll/
 		$b = "WS2_32.dll"
 		$c = /Reflective[ ]?Loader/
 
 	condition:
-		($a and $b) or $c
+		($a and $b) and $c
 
 }
