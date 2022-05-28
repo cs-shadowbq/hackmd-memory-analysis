@@ -16,6 +16,7 @@ This example dump was pulled from the `LiteAgent.exe` process from the running i
   - [Analysis Tools](#analysis-tools)
     - [Linux - Dump to Unicode with Strings](#linux---dump-to-unicode-with-strings)
     - [Yara](#yara)
+    - [HexEditor HXD](#hexeditor-hxd)
     - [`minidump.py` Analysis](#minidumppy-analysis)
     - [WinDbg - UserMode Analysis](#windbg---usermode-analysis)
     - [Google BreakPad](#google-breakpad)
@@ -41,8 +42,8 @@ Actually there are many different types of MINIDUMPS. They all stem from the doc
 ### Magic Number
 
 ```code
-magic1 = [77,68,77,80]
-magic2 = [147,167]
+magic1 = [77,68,77,80] 4D 44 4D 50
+magic2 = [147,167] 93 A7
 ```
 
 ![](https://i.imgur.com/E2I0I0Q.png)
@@ -126,6 +127,12 @@ example sigs: [tools/yara-sigs/ip.yar](tools/yara-sigs/ip.yar)
 
 ![](https://i.imgur.com/rPp1do6.png)
 ![](https://i.imgur.com/uYjB8hP.png)
+
+### HexEditor HXD
+
+Looking at the location `0x335987` of the first IPV4 hit from `YARA` we see a C2 Call Back associated with the meterpreter.
+
+![](https://i.imgur.com/ZKsQ3rn.png)
 
 
 ### `minidump.py` Analysis
