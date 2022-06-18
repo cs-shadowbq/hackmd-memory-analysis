@@ -91,6 +91,12 @@ Here is the information about the system this PID 2828 is pulled from.
 ![](https://i.imgur.com/gRhhO2x.png)
 
 
+### Lite Agent
+
+`LiteAgent` PID 2828 - Also known as XenAgent is the Amazon Tool for managing the vm.
+
+![](https://i.imgur.com/xdKP4xj.png)
+
 ### Aquisition of MINIDUMP via RTR - Crowdstrike 
 
 In this example, `memdump 2828` I used CrowdStrike `memdump` collect the small process only sector memory aquistion.
@@ -105,6 +111,7 @@ The file from crowdstrike comes as
 ## Analysis Tools
 
 
+
 ### Linux - Dump to Unicode with Strings
 
 Dumping Strings to UNICODE
@@ -117,7 +124,7 @@ usecase: `memdump` a hollowed process, you can just run 'strings' and possibly i
 
 ### Yara 
 
-(Note: Different Example)
+(Note: Different Example, not 'LiteAgent')
 
 Using yara looking for C2 ip callback (172.17.0.21) strings in a hollowed process Pid-6624 after migration from meterpeter from pid-X to pid-6624 (notepad.exe)
 
